@@ -1,0 +1,6 @@
+Alice:JavaScript:alice@example.com
+Bob:Algorithms:bob@example.com
+Pronob:CS 234:pronob.kumar@go.winona.edu
+Li:CS 344:li@example.edu
+Li:CS 344:li@example.edu
+Li:CS 344:li@example.edu
