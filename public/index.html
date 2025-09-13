@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online CS Tutoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Online CS Tutoring</h1>
+        <nav id="navbar">
+            <button id="loginBtn" onclick="showSection('login')">Login</button>
+        </nav>
+    </header>
+    <main>
+        <!-- Login Section -->
+        <section id="login">
+            <h2>User Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <button onclick="register()">Register</button>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="hidden">
+            <h2>Welcome to Your Profile</h2>
+            <button onclick="showSection('tutors'); fetchTutors()">Search Tutors</button>
+            <button onclick="showSection('questions'); fetchQuestions()">Question Board</button>
+        </section>
+
+        <!-- Tutors Section -->
+        <section id="tutors" class="hidden">
+            <h2>Tutor Directory</h2>
+            <div style="display: flex; justify-content: space-between;">
+                <!-- Tutor List -->
+                <div>
+                    <input type="text" id="searchTutors" placeholder="Search Tutors" oninput="searchTutors()">
+                    <ul id="tutorList"></ul>
+                </div>
+
+                <!-- Be a Tutor Form -->
+                <div>
+                    <h3>Be a Tutor</h3>
+                    <input type="text" id="tutorName" placeholder="Your Name">
+                    <input type="text" id="tutorSubject" placeholder="Expertise (e.g., JavaScript)">
+                    <input type="email" id="tutorEmail" placeholder="Your Email">
+                    <button onclick="addTutor()">Submit</button>
+                </div>
+            </div>
+            <button onclick="showSection('profile')">Back to Profile</button>
+        </section>
+
+        <!-- Questions Section -->
+        <section id="questions" class="hidden">
+            <h2>Question Board</h2>
+            <textarea id="newQuestion" placeholder="Post a question..."></textarea>
+            <button onclick="postQuestion()">Post Question</button>
+            <ul id="questionList"></ul>
+            <button onclick="showSection('profile')">Back to Profile</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
