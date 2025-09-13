@@ -1,0 +1,4 @@
+alice|What is recursion?|bob>>Recursion is a function calling itself
+charlie|What is a binary tree?|alice>>A binary tree is a tree where each node has at most two children
+|Pronob>>A binary tree is a non-linear data structure where nodes can have zero, one, or two children.
+Pronob|When is the final project due|Li>>4th dec
